@@ -20,10 +20,11 @@ confirmBtn.addEventListener("click",()=>{
 
 cardNumInput.addEventListener("keyup",()=>{
 
+let value = cardNumInput.value.replace(/\d{4}(?=.)/g, '$& ');
   if(cardNumInput.value.trim() === ""){
     codeTextEl.innerHTML = "0000 0000 0000 0000";
   }else{
-    codeTextEl.innerHTML = cardNumInput.value.trim();
+    codeTextEl.innerHTML = value;
   }
 })
 /*--------------------------------------*/
@@ -71,7 +72,7 @@ function validation(){
   let vaild2 = false;
   let vaild3 = false;
   let vaild4 = false;
-  let value = cardNumInput.value.replace(/\s/g, '')
+  let value = cardNumInput.value;
   console.log(value)
   if(isNaN(value) || cardNumInput.value.replace(" ","") === ""){
     cardNumInput.classList.add('invalide-value');

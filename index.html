@@ -67,7 +67,7 @@
         
         <div class="card-number container">
           <label for="card-number">CARD NUMBER</label>
-          <input id="card-number" class="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <input maxlength="16" id="card-number" class="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000">
 
         </div>
         
@@ -75,13 +75,13 @@
           <div class="left">
             <label for="date">EXP. DATE (MM/YY)</label>
             <div>   
-              <input id="date-month" class="date-month" type="text" placeholder="MM">
-              <input id="date-years" class="date-years" type="text" placeholder="YY">
+              <input maxlength="2" id="date-month" class="date-month" type="text" placeholder="MM">
+              <input maxlength="2" id="date-years" class="date-years" type="text" placeholder="YY">
           </div>
         </div>
         <div class="right">
           <label for="cvc">CVC</label>
-          <input class="cvc" type="text" placeholder="e.g. 123">
+          <input maxlength="3" class="cvc" type="text" placeholder="e.g. 123">
         </div> 
       </div>
       
