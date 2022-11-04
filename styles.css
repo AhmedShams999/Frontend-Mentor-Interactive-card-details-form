@@ -1,0 +1,359 @@
+:root{
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+}
+body{
+  margin: 0;
+  min-height: 100vh;
+  font-family: Space Grotesk,sans-serif;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+main{
+
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+main .left-side{
+  height: 100%;
+}
+main .left-side .descktop{
+  height: 100%;
+}
+main .left-side .mobile{
+  display: none;
+}
+main .right-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main .right-side .all{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+}
+
+main .right-side .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+main .right-side .date{
+  flex-direction: row;
+  margin-bottom: 38px;
+}
+main .right-side .date .left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .right-side .date .right input{
+  width: 80%;
+}
+main .right-side .date .left .date-month,
+main .right-side .date .left .date-years
+{
+  width: 46px;
+  font-size: 1rem;
+
+}
+main .right-side .date .left .date-years{
+  margin-left: 5px;
+}
+main .right-side .date .right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  margin-left: 0px;
+}
+::placeholder{
+  color:var(--Light-grayish-violet);
+  font-family: Space Grotesk,sans-serif;
+}
+
+main .right-side .container input
+{
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px 15px;
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 10px;
+ 
+}
+main .right-side .container input:focus{
+
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to left,hsl(278, 94%, 30%) ,hsl(249, 99%, 64%)) border-box;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+ 
+}
+
+main .right-side .container label{
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  letter-spacing: 0.2rem;
+  color: var(--Very-dark-violet);
+}
+main .right-side button{
+  width: 100%;
+  height: 52px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--Very-dark-violet);
+  cursor: pointer;
+}
+
+main .cards-position1{
+  position: absolute;
+  top: 150px;
+  left: 170px;
+}
+main .cards-position1 .card-img{
+  width: 100%;
+}
+main .cards-position1 .text{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  letter-spacing: 0.2rem;
+}
+main .cards-position1 .text .logo{
+  flex: 2;
+}
+
+main .cards-position1 .text .name-code-dateNum{
+  flex: 1;  
+}
+
+main .cards-position1 .text .name-code-dateNum .name-dateNum{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 45px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--Light-grayish-violet);
+}
+main .cards-position1 .text .name-code-dateNum .name-dateNum .dateNum{
+  display: flex;
+}
+main .cards-position1 .text .name-code-dateNum .name-dateNum p{
+  margin: 0;
+}
+main .cards-position1 .text .name-code-dateNum .code{
+ 
+  text-align: left;
+  margin: 0;
+  color: var(--Light-grayish-violet);
+  font-size: 1.8rem;
+}
+
+main .cards-position2{
+  position: absolute;
+  top: 440px;
+  left: 280px;
+}
+main .cards-position2 img{
+  width: 100%;
+}
+main .cards-position2 div{
+  position: absolute;
+  top: 92px;
+  right: 55px;
+  color: var(--Light-grayish-violet);
+  margin: 0;
+}
+
+main .right-side .card-number .invalide-value{
+  border: 1px solid hsl(0, 100%, 66%);
+}
+main .right-side .date .invalide-value{
+  border: 1px solid hsl(0, 100%, 66%);
+}
+main .right-side .card-name .invalide-value{
+  border: 1px solid hsl(0, 100%, 66%);
+}
+.error{
+  font-size: 0.7rem;
+  color: hsl(0, 100%, 66%);
+  display: block;
+}
+
+/* vaild section */
+main .right-side .vaild{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  animation: scale 0.5s ease-out;
+  
+}
+main .right-side .vaild h1{
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 40px;
+  letter-spacing: 0.3rem;
+  color: var(--Very-dark-violet);
+}
+main .right-side .vaild h2{
+
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--Dark-grayish-violet);
+  margin-bottom: 60px;
+
+}
+
+@keyframes scale {
+  0%{
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  90%{
+    transform: scale(1.05)
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Mobile view */
+@media only screen and (max-width: 375px){
+  main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+  }
+  main .left-side .descktop{
+    display: none;
+  }
+  main .left-side .mobile{
+    display: block;
+  }
+  main .left-side{
+    flex: 1;
+  }
+  main .right-side{
+    flex: 3;
+  }
+  
+  main .right-side .all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+  }
+  ::placeholder{
+    font-size: 1.1rem;
+  }
+  main .right-side .date .left .date-month,
+  main .right-side .date .left .date-years
+{
+  width: 40px;
+
+}
+main .right-side .container label{
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  letter-spacing: 0.2rem;
+}
+  main .cards-position1{
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    width: 300px;
+    z-index: 1;
+  }
+  main .cards-position1 .text .logo{
+    flex: 1;
+    width: 50px;
+  }
+  main .cards-position1 .text .logo img{
+    width: 100%;
+  }
+  main .cards-position1 .text .name-code-dateNum .code{
+    font-size: 17px;
+    text-align: left;
+  }
+  main .cards-position1 .text .name-code-dateNum .name{
+    font-size: 0.55rem;
+  }
+  main .cards-position1 .text .name-code-dateNum .dateNum{
+    font-size: 0.55rem;
+  }
+  main .cards-position1 .text .name-code-dateNum .name-dateNum{
+    height: 30px;
+  }
+  main .right-side .container input
+{
+ font-size: 15px;
+}
+  
+  main .cards-position2{
+    position: absolute;
+    top: 45px;
+    left: 60px;
+    width: 300px;
+}
+
+main .cards-position2 div{
+  top: 58px;
+  right: 35px;
+  font-size: 0.8rem;
+}
+main .right-side .vaild{
+  width: 330px;
+  font-size: 0.9rem;
+  
+}
+main .right-side .vaild h1{
+  font-weight: 600;
+  font-size: 1.5rem;
+
+}
+main .right-side .vaild h2{
+
+  font-size: 1rem;
+  margin-bottom: 40px;
+
+}
+main .cards-position1 .text{
+padding: 20px;
+}
+
+}
