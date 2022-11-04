@@ -71,8 +71,9 @@ function validation(){
   let vaild2 = false;
   let vaild3 = false;
   let vaild4 = false;
-
-  if(isNaN(cardNumInput.value.replace(" ","")) || cardNumInput.value.replace(" ","") === ""){
+  let value = cardNumInput.value.replace(/\s/g, '')
+  console.log(value)
+  if(isNaN(value) || cardNumInput.value.replace(" ","") === ""){
     cardNumInput.classList.add('invalide-value');
     errorMsg.classList.add('error');
     containerEl[1].appendChild(errorMsg);
